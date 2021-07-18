@@ -6,7 +6,7 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 // get all products
 router.get('/', (req, res) => {
   // find all products
-  product.findAll({ //select statement 
+  Product.findAll({ //select statement 
     include: [
       Category, {
         model: Tag,
